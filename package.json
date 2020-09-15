@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "gatsby clean && gatsby build",
 		"deploy": "gatsby clean && gatsby build && firebase deploy",
-		"now": "yarn deploy && now --public",
+		"now": "yarn deploy && vercel --prod",
 		"develop": "gatsby develop",
 		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
 		"serve": "gatsby serve",
@@ -69,8 +69,8 @@
 		"eslint-plugin-react-hooks": "^3.0.0",
 		"husky": "^4.2.3",
 		"lint-staged": "^10.1.2",
-		"now": "^18.0.0",
-		"prettier": "^2.0.4"
+		"prettier": "^2.0.4",
+		"vercel": "^20.1.0"
 	},
 	"keywords": [
 		"gatsby"

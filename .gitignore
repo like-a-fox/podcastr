@@ -65,3 +65,5 @@ tailwind.custom.css
 
 .firebase
 .firebaserc
+
+.vercel
