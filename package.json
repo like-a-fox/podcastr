@@ -1,0 +1,131 @@
+{
+	"name": "podcastr",
+	"description": "Master Your Cast",
+	"version": "1.0.0",
+	"author": "Derek Musser<@like-a-fox>",
+	"scripts": {
+		"build": "gatsby clean && gatsby build",
+		"deploy": "gatsby clean && gatsby build && firebase deploy",
+		"now": "yarn deploy && now --public",
+		"develop": "gatsby develop",
+		"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+		"serve": "gatsby serve",
+		"lint": "eslint \"src/**/*.{js,jsx,json,md}\"",
+		"lint:fix": "yarn format && eslint \"src/**/*.{js,jsx,json,md}\" --fix",
+		"flow": "./node_modules/flow-bin/cli.js"
+	},
+	"dependencies": {
+		"@material-ui/core": "^4.9.7",
+		"@material-ui/icons": "^4.9.1",
+		"@reduxjs/toolkit": "^1.3.2",
+		"clsx": "^1.1.0",
+		"danger": "^10.1.0",
+		"date-fns": "^2.11.1",
+		"dotenv": "^8.2.0",
+		"firebase": "^7.13.1",
+		"flow": "^0.2.3",
+		"gatsby": "^2.19.45",
+		"gatsby-image": "^2.2.44",
+		"gatsby-plugin-firebase": "^0.2.0-beta.4",
+		"gatsby-plugin-manifest": "^2.2.48",
+		"gatsby-plugin-material-ui": "^2.1.6",
+		"gatsby-plugin-offline": "^3.0.41",
+		"gatsby-plugin-purgecss": "^5.0.0",
+		"gatsby-plugin-react-helmet": "^3.1.24",
+		"gatsby-plugin-react-svg": "^3.0.0",
+		"gatsby-plugin-sharp": "^2.4.13",
+		"gatsby-plugin-smoothscroll": "^1.1.0",
+		"gatsby-plugin-styled-components": "^3.2.1",
+		"gatsby-plugin-tailwindcss": "^1.0.3",
+		"gatsby-source-filesystem": "^2.1.56",
+		"gatsby-transformer-sharp": "^2.3.19",
+		"notistack": "^0.9.9",
+		"prop-types": "^15.7.2",
+		"react": "^16.12.0",
+		"react-dom": "^16.12.0",
+		"react-dropzone": "^10.2.2",
+		"react-firebase-hooks": "^2.1.1",
+		"react-helmet": "^6.0.0",
+		"react-redux": "^7.2.0",
+		"react-redux-firebase": "^3.3.0",
+		"styled-components": "^5.0.1",
+		"tailwindcss": "^1.2.0",
+		"typeface-cantata-one": "^0.0.72"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@storybook/addon-actions": "^5.3.18",
+		"@storybook/addon-links": "^5.3.18",
+		"@storybook/addons": "^5.3.18",
+		"@storybook/react": "^5.3.18",
+		"babel-loader": "^8.1.0",
+		"babel-plugin-remove-graphql-queries": "^2.8.1",
+		"babel-plugin-styled-components": "^1.10.7",
+		"babel-plugin-tailwind-components": "^0.5.10",
+		"cypress": "^4.3.0",
+		"eslint-plugin-filenames": "^1.3.2",
+		"eslint-plugin-import": "^2.20.2",
+		"eslint-plugin-react": "^7.19.0",
+		"eslint-plugin-react-hooks": "^3.0.0",
+		"husky": "^4.2.3",
+		"lint-staged": "^10.1.2",
+		"now": "^18.0.0",
+		"prettier": "^2.0.4"
+	},
+	"keywords": [
+		"gatsby"
+	],
+	"license": "MIT",
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint:fix && git add .",
+			"lint-staged": "yarn lint:fix",
+			"pre-push": "yarn deploy"
+		}
+	},
+	"prettier": {
+		"singleQuote": true,
+		"useTabs": true,
+		"jsxSingleQuote": true,
+		"endOfLine": "lf",
+		"semi": true,
+		"jsxBracketSameLine": true,
+		"arrowParens": "always",
+		"trailingComma": "es5"
+	},
+	"eslintConfig": {
+		"globals": {
+			"tw": true
+		},
+		"extends": [
+			"react-app",
+			"eslint:recommended",
+			"plugin:react/recommended",
+			"plugin:import/errors",
+			"plugin:import/warnings"
+		],
+		"plugins": [
+			"react-hooks",
+			"filenames",
+			"import"
+		],
+		"rules": {
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
+			"react/prop-types": "error",
+			"filenames/match-regex": [
+				2,
+				"^(_[a-zA-Z]+|[index]+)",
+				true
+			],
+			"no-mixed-spaces-and-tabs": "off"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Charlesfoodog/podcastr"
+	},
+	"bugs": {
+		"url": "https://github.com/Charlesfoodog/podcastr/issues"
+	}
+}

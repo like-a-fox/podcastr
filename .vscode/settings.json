@@ -1,0 +1,18 @@
+{
+	"html.format.indentHandlebars": true,
+	"html.format.indentInnerHtml": true,
+	"html.format.wrapAttributes": "preserve-aligned",
+	"editor.renderFinalNewline": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"prettier.jsxBracketSameLine": true,
+	"prettier.jsxSingleQuote": true,
+	"prettier.htmlWhitespaceSensitivity": "ignore",
+	"prettier.packageManager": "yarn",
+	"prettier.proseWrap": "always",
+	"prettier.resolveGlobalModules": true,
+	"prettier.singleQuote": true,
+	"prettier.useEditorConfig": false,
+	"prettier.useTabs": true,
+	"files.autoSave": "onFocusChange",
+	"editor.detectIndentation": false
+}
