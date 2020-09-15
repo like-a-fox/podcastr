@@ -123,9 +123,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Charlesfoodog/podcastr"
+		"url": "https://github.com/like-a-fox/podcastr"
 	},
 	"bugs": {
-		"url": "https://github.com/Charlesfoodog/podcastr/issues"
+		"url": "https://github.com/like-a-fox/podcastr/issues"
 	}
 }
